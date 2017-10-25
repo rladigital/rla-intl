@@ -1,9 +1,15 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
-export const trans = (message, values = {}) => {
+
+function FormattedMessageFixed(props) {
+    return <FormattedMessage {...props} />;
+}
+
+export const trans = (message, values = {}, description = "") => {
     return (
-        <FormattedMessage
+        <FormattedMessageFixed
             id={message}
+            description={description}
             defaultMessage={message}
             values={values}
         />
