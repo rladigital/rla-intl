@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-const trans = require("../../dist/rla-intl").trans;
+import { trans } from "rla-intl.js";
 
 class App extends Component {
     render() {
@@ -10,13 +10,12 @@ class App extends Component {
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <h1 className="App-title">
-                        {trans("Welcome {name}", { name: "tom" })}
+                        {trans("Welcome to {app}", {
+                            app: "RLA Internationalisation"
+                        })}
                     </h1>
                 </header>
-                <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to
-                    reload.
-                </p>
+                <p className="App-intro">Put examples here...</p>
             </div>
         );
     }

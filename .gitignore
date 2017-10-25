@@ -1,2 +1,5 @@
 /node_modules
 npm-debug.log
+
+/examples/node_modules
+!/examples/node_modules/rla-intl.js
