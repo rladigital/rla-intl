@@ -2,7 +2,7 @@
     "name": "rla-intl",
     "version": "0.0.1",
     "description": "A set of useful functions to use with react-intl",
-    "main": "src/index.js",
+    "main": "dist/rla-intl.js",
     "directories": {
         "example": "examples"
     },
