@@ -1,6 +1,6 @@
 {
     "name": "rla-intl",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A set of useful functions to use with react-intl",
     "main": "dist/rla-intl.js",
     "directories": {
@@ -15,7 +15,14 @@
         "type": "git",
         "url": "git+https://github.com/rladigital/rla-intl.git"
     },
-    "keywords": ["rla", "intl", "i18n", "react-intl", "trans", "translation"],
+    "keywords": [
+        "rla",
+        "intl",
+        "i18n",
+        "react-intl",
+        "trans",
+        "translation"
+    ],
     "author": "tom.lawton@rla.co.uk",
     "license": "ISC",
     "bugs": {
