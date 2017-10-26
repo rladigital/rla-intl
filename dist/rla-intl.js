@@ -93,11 +93,33 @@ var _reactIntl = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function FormattedMessageFixed(props) {
+    return _react2.default.createElement(_reactIntl.FormattedMessage, props);
+}
+
 var trans = exports.trans = function trans(message) {
     var values = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var description = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "";
 
-    return _react2.default.createElement(_reactIntl.FormattedMessage, {
+    //If React is past version 16 a string can be returned, avoiding an extra span
+    //The check involves using an undocumented property, so we check for it first
+    if (typeof _react2.default.version === "string" && parseInt(_react2.default.version.split(".")[0], 10) >= 16) {
+        return _react2.default.createElement(
+            FormattedMessageFixed,
+            {
+                id: message,
+                description: description,
+                defaultMessage: message,
+                values: values
+            },
+            function (message) {
+                return message;
+            }
+        );
+    }
+    return _react2.default.createElement(FormattedMessageFixed, {
         id: message,
+        description: description,
         defaultMessage: message,
         values: values
     });
